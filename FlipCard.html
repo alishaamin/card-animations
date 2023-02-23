@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>FlipCard</title>
+      <link rel="icon" href="/logo.png">
+  </head>
+  <body>
+    <div class="card">
+        <div class="front">
+            front
+        </div>
+        <div class="back">
+            back
+        </div>
+    </div>
+        
+    <style>
+      body{
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:#000;
+
+      }
+      .card{
+        width:300px;
+        height:200px;
+        position:relative;
+        background-color: transparent;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+      .card:hover {
+        transform:rotateY(180deg);
+        cursor:pointer;
+      }
+      .front, .back{
+        height:100%;
+        width:100%;
+        background: #2694d9;
+        position:absolute;
+        border-radius:10px;
+        backface-visibility: hidden;
+        display:flex;
+        justify-content:center;
+        align-items: center;
+      }
+
+      .back{
+        transform:rotateY(180deg);
+        background:#fff;
+      }
+    </style>
+  </body>
+</html>

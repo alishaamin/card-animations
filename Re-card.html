@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive card</title>
+  <link rel="icon" href="/logo.png">
+  
+  <!--CSS-->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #151515;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 1rem;
+    }
+
+    /* ======================== */
+
+    html {
+        font-size: 62.5%;
+    }
+
+    .card {
+        width: 30rem;
+        background-color: #B4A5A5;
+        color: #353535;
+        padding: 1.5rem;
+        border-radius: .4rem;
+    }
+
+    .card__image {
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+        border-radius: .4rem;
+    }
+
+    .card__information-title {
+        font-size: 3rem;
+    }
+
+    .card__information-description {
+        font-size: 1.4rem;
+    }
+
+    @media screen and (min-width: 34.375em) {
+        .card {
+            width: 60rem;
+            display: flex;
+            align-items: center;
+            column-gap: 1.5rem;
+        }
+
+        .card__image {
+            flex: 0 0 20rem;
+        }
+
+        .card__information-description {
+            font-size: 1.6rem;
+        }
+    }
+  </style>
+</head>
+
+<body>
+  <article class="card">
+    <img src="./re-card.jpg" alt="Man at the beach" class="card__image">
+    <div class="card__information">
+      <h2 class="card__information-title">Samaná</h2>
+      <p class="card__information-description">Samaná is a town...</p>
+    </div>
+  </article>
+</body>
+</html>
